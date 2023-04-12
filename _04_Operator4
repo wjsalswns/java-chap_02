@@ -1,0 +1,39 @@
+package chap_02;
+
+public class _04_Operator4 {
+	public static void main(String[] args) {
+		//논리 연산자
+		boolean 치킨 = false;
+		boolean 피자 = true;
+		boolean 탕수육 = true;
+		
+		// &&은 그리고(and) (모두가 참이어야 함)
+		System.out.println(치킨 && 피자 && 탕수육);	// 최고의 식단 -> 모두 true일 때 true
+		
+		// ||은 또는(or) (하나만 참이어도 됨)
+		System.out.println(치킨 || 피자 || 탕수육);	// 괜찮은 식단 -> 하나라도 true이면 true
+		// 엔터 위에 \\\\\\\ 쉬프트를 누른 상태에서 ||||||
+		System.out.println("=================");
+		// And 연산
+		System.out.println((5 > 3) && (3 > 1));	// true && true -> true
+		System.out.println((5 < 3) && (3 > 1));	// false && true -> true
+		// false인 순간 뒤에 연산은 하지 않고 false
+		// And 연산은 참일 수도 있고 거짓일 수도 있는 것을 먼저 쓰는 게 좋음.
+		
+		// Or 연산
+		System.out.println((5 > 3) || (3 > 1));	// true || true -> true
+		System.out.println((5 < 3) || (3 > 1));	// false || false -> true
+		System.out.println((5 < 3) || (3 < 1));	// false || false -> false
+		// true인 순간 뒤에 연산은 하지 않고 true
+		// Or 연산은 참일 확률이 높은 것을 먼저 쓰는 게 좋음
+		
+		// System.out.println(1 < 3 < 5); 묶어서 쓰는 수식은 불가능하다.		
+		System.out.println((1 < 3) && (3 > 5));
+		
+		// 논리 부정 연산자
+		System.out.println(!true);	// false
+		System.out.println(!false);	// true
+		System.out.println(!(5 == 5));	// false
+		System.out.println(!(5 == 3));	// true
+	}
+}
